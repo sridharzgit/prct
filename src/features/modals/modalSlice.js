@@ -14,6 +14,8 @@ const modalSlice = createSlice({
   reducers: {
     show: (state,action) =>{
       state[action.payload.modalType].show = true
+      state[action.payload.modalType].data = action.payload.data
+
     },
     hide: (state,action) =>{
       state[action.payload.modalType].show = false
